@@ -25,10 +25,10 @@ mongoose.connect('mongodb://localhost:27017/globamantics')
 const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'connection error:'))
-db.once('open'. function () {
+db.once('open', function () {
   console.log('Connected to MongoDB')
 
   app.listen(app.get('port'), function () {
-    console.llog('API Server Listenig on port ' + app.get('port'))
+    console.log('API Server Listenig on port ' + app.get('port'))
   })
 })
